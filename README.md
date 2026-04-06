@@ -11,7 +11,7 @@ O processo cobre desde a **extração dos dados em CSV**, passando pela **limpez
 
 ## 🛠️ Tecnologias Utilizadas
 - SQL Server (modelagem de dados, views e transformações)
-- :contentReference[oaicite:0]{index=0} (dashboard e visualização de dados)
+- Power BI (dashboard e visualização de dados)
 - Git / GitHub (versionamento e portfólio)
 - CSV (fonte de dados original)
 
