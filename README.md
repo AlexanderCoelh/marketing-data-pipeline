@@ -7,7 +7,7 @@ O processo cobre desde a **extração dos dados em CSV**, passando pela **limpez
 
 ![Preview do Dashboard](powerbi/dashboard_preview.png)
 
-🔗 **Dashboard publicado no Power BI:** [Visualizar Dashboard](https://app.powerbi.com/groups/me/reports/56c168b8-e7b1-450c-9896-c2c54e3975d2/bb3846277a786065ea39?experience=power-bi)
+🔗 **Dashboard publicado no Power BI:** [Visualizar Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYTliYjQ0M2EtNGUyYy00MjdhLWJjZTktYjExYTczNzE3YmRlIiwidCI6IjlkNTM4NDQwLTZkMjMtNDI4Ny04OTFkLTFlOTdhYmFiZGY1YyJ9)
 
 ---
 
