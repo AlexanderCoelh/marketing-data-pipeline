@@ -98,13 +98,5 @@ O dashboard foi desenvolvido no Power BI com foco em análise de negócio e stor
 
 ---
 
-## 🚀 Próximas Melhorias
-- Adicionar análise temporal das campanhas
-- Criar segmentação de clientes
-- Aplicar análise preditiva
-- Expandir os KPIs de performance
-
----
-
 ## 📎 Sobre
 Este projeto foi desenvolvido como parte do meu aprendizado em **Análise de Dados e Business Intelligence**, com foco em **SQL, modelagem de dados, visualização de dados e construção de dashboards no Power BI**.
