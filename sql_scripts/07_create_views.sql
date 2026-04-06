@@ -60,8 +60,9 @@ GO
 -- View para observar a aceitação da campanha pelos clientes
 
 CREATE VIEW vw_campaign_perfomance AS
-SELECT 
-	acceptedcmp1
+SELECT
+	id
+	,acceptedcmp1
 	,acceptedcmp2
 	,acceptedcmp3
 	,acceptedcmp4
@@ -78,4 +79,66 @@ SELECT
 	,response
 	,complain
 FROM stg_marketing_campaign
+GO
+
+-- View para calcular os gastos de categoria de produtos
+
+CREATE VIEW vw_products_revenue AS
+SELECT id,'Wines' as Produtos, SUM(mntwines) AS total
+FROM vw_customer_spending
+GROUP BY id
+UNION ALL
+SELECT id,'Meat', SUM(mntmeatproducts)
+FROM vw_customer_spending
+GROUP BY id
+UNION ALL
+SELECT id,'Fish', SUM(mntfishproducts)
+FROM vw_customer_spending
+GROUP BY id
+UNION ALL
+SELECT id,'Fruits', SUM(mntfruits)
+FROM vw_customer_spending
+GROUP BY id
+UNION ALL
+SELECT id,'Sweets', SUM(mntsweetproducts)
+FROM vw_customer_spending
+GROUP BY id
+UNION ALL
+SELECT id,'Gold', SUM(mntgoldprods)
+FROM vw_customer_spending
+GROUP BY id
+GO
+
+-- View para ver se clientes que aceitaram campanhas passadas, responderam a campanha atual
+
+CREATE VIEW vw_campaign_conversion AS
+SELECT id,'Campaign 1' AS campaign
+,SUM(CAST(acceptedcmp1 AS INT)) AS total_accepted
+,SUM(CASE WHEN acceptedcmp1 = 1 AND response = 1 THEN 1 ELSE 0 END) AS converted_retention
+FROM vw_campaign_perfomance
+GROUP BY id
+UNION ALL
+SELECT id, 'Campaign 2'
+,SUM(CAST(acceptedcmp2 AS INT))
+,SUM(CASE WHEN acceptedcmp2 = 1 AND response = 1 THEN 1 ELSE 0 END)
+FROM vw_campaign_perfomance
+GROUP BY id
+UNION ALL
+SELECT id, 'Campaign 3'
+,SUM(CAST(acceptedcmp3 AS INT))
+,SUM(CASE WHEN acceptedcmp3 = 1 AND response = 1 THEN 1 ELSE 0 END)
+FROM vw_campaign_perfomance
+GROUP BY id
+UNION ALL
+SELECT id, 'Campaign 4'
+,SUM(CAST(acceptedcmp4 AS INT))
+,SUM(CASE WHEN acceptedcmp4 = 1 AND response = 1 THEN 1 ELSE 0 END)
+FROM vw_campaign_perfomance
+GROUP BY id
+UNION ALL
+SELECT id, 'Campaign 5'
+,SUM(CAST(acceptedcmp5 AS INT))
+,SUM(CASE WHEN acceptedcmp5 = 1 AND response = 1 THEN 1 ELSE 0 END)
+FROM vw_campaign_perfomance
+GROUP BY id
 GO
