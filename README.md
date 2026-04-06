@@ -5,7 +5,7 @@ Este projeto tem como objetivo construir um **pipeline de dados completo para an
 
 O processo cobre desde a **extração dos dados em CSV**, passando pela **limpeza, modelagem e criação de views no SQL Server**, até a **construção de dashboards interativos no Power BI**, permitindo gerar insights sobre perfil dos clientes, receita, comportamento de compra e performance de campanhas.
 
-![Preview do Dashboard](./powerbi/dashboard-preview.png)
+![Preview do Dashboard](powerbi/dashboard_preview.png)
 
 ---
 
