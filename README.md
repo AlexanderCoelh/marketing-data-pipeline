@@ -85,7 +85,7 @@ O dashboard foi desenvolvido no Power BI com foco em análise de negócio e stor
 - Vinhos representam a categoria com maior faturamento, com receita superior a R$ 680 mil
 - Clientes de renda média representam a maior parcela da base
 - Clientes com filhos representam a maior parcela do público analisado
-- Campaign 2 apresentou a maior taxa de resposta, com 66,67%
+- A Campanha 2 possui o menor número de aceites, porém a maior Taxa de Conversão (66,67%).
 
 ---
 
